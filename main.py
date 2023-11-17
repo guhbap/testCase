@@ -41,9 +41,6 @@ def get_type(data:str) -> str:
         return 'email'
     return 'text' # по ТЗ текст это все, что не прошло валидацию
 
-db = TinyDB('db.json')
-table = db.table('templates')
-Template = Query() # Объект для поиска в БД
 
 @server.bind('/get_form')
 def get_form(req: ehttp.Request):
@@ -69,5 +66,11 @@ def get_form(req: ehttp.Request):
 
     return req.data # в случае провала всех проверок возвращаем ключи и их типы данных
 
-server.start()
-db.close()
+if __name__ == "__main__": 
+    db = TinyDB('db.json')
+    table = db.table('templates')
+    Template = Query() # Объект для поиска в БД
+
+    server.start()
+    db.close()
+    
