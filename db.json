@@ -1,0 +1,21 @@
+{
+    "templates": {
+        "1": {
+            "name": "NotificationsTemplate",
+            "email_field": "email",
+            "phone_field": "phone"
+        },
+        "2": {
+            "name": "RegistrationTemplate",
+            "email_field": "email",
+            "name_field": "text",
+            "password_field": "text"
+        },
+        "3": {
+            "name": "LoginTemplate",
+            "capcha_code_field": "email",
+            "email_field": "email",
+            "password_field": "text"
+        }
+    }
+}
